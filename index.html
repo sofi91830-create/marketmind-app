@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>MarketMind AI</title>
+
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Предотвращаем FOUC — фон совпадает с приложением */
+      html, body, #root {
+        margin: 0;
+        padding: 0;
+        background: #0f172a;
+        min-height: 100vh;
+        font-family: 'DM Sans', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Убираем скроллбар на мобиле */
+      ::-webkit-scrollbar { width: 0; }
+    </style>
+  </head>
+
+  <body>
+    <!-- React монтируется сюда -->
+    <div id="root"></div>
+
+    <!--
+      Vite подхватывает этот тег и обрабатывает src/main.jsx
+      через весь пайплайн (JSX, Tailwind, HMR и т.д.)
+    -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
