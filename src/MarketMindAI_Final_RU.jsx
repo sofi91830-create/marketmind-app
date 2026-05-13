@@ -19,7 +19,7 @@ import { useState, useEffect, useMemo } from "react";
 import {
   ShoppingBag, RotateCcw, Wand2, Loader2, Star,
   Search, Lock, CheckCircle2, AlertTriangle, ChevronRight,
-  BarChart3, MessageSquare, Telescope, Home, Wifi, Sparkles,
+  BarChart3, MessageSquare, Home, Wifi, Sparkles,
   Package, ArrowUpRight, Target, Eye, Copy, Send, TrendingUp,
   Crown, Zap,
 } from "lucide-react";
@@ -413,7 +413,7 @@ const GrowthTab = ({ isPro, onUpgrade }) => {
       <div className="relative">
         <Card className="p-4">
           <div className="flex items-center gap-2 mb-3">
-            <Telescope size={14} className="text-cyan-400" />
+            <Search size={14} className="text-cyan-400" />
             <span className="text-slate-100 text-[13px] font-bold">Шпион конкурентов</span>
           </div>
           <div className="flex gap-2">
@@ -504,7 +504,7 @@ const GrowthTab = ({ isPro, onUpgrade }) => {
 const NAV = [
   { id: "analytics",  label: "Аналитика",   Icon: Home        },
   { id: "reputation", label: "Репутация",   Icon: MessageSquare },
-  { id: "spy",        label: "Шпион и SEO", Icon: Telescope   },
+  { id: "spy",        label: "Шпион и SEO", Icon: Search   },
 ];
 
 const BottomNav = ({ active, onChange }) => (
