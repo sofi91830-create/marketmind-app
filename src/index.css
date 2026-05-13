@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Глобальный сброс для Telegram Mini App */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Отключаем автомасштаб текста на iOS */
+  -webkit-text-size-adjust: 100%;
+  /* Поддержка safe-area для iPhone */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  overscroll-behavior: none; /* Убирает bounce-эффект в TMA */
+}
+
+/* Убираем скроллбар везде */
+::-webkit-scrollbar { width: 0; height: 0; }
+scrollbar-width: none;
